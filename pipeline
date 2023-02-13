@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('build') {
+            steps {
+                echo 'building'
+            }
+        }
+        stage('test') {
+            steps {
+                echo 'testing'
+                sh 'ls'
+            }
+        }
+        stage('depoly') {
+            steps {
+                echo 'deploying this'
+                sh 'pwd'
+            }
+        }
+        stage('production') {
+            input {
+                message "should we run this command"
+                ok "yes please"
+            }
+            steps {
+                echo 'deploying in production'
+                sh 'ls'
+            }
+        }
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+        failure { 
+            echo 'failure!'
+        }
+        success { 
+            echo 'success ho gya!'
+        }
+    }
+}
