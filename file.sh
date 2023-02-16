@@ -9,4 +9,5 @@ ls
 sudo apt-get install -y
 ls
 date
+echo "this last one commit is from git server"
 
