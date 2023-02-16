@@ -1,7 +1,5 @@
 echo "this is shellscripting learning phase"
 ls
-pwd
-sleep 4
 sudo apt update -y
 sleep 5
 ls
