@@ -8,4 +8,5 @@ sleep 5
 ls
 sudo apt-get install -y
 ls
+date
 
