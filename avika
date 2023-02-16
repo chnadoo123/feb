@@ -1,1 +1,3 @@
-hello avika how are you
+echo "hello avika how are you"
+ls
+pwd
